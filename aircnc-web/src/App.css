@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  min-height: 100%;
+}
+
+body {
+  background: #000 url('./assets/background.jpg') no-repeat;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+body, input, button {
+  font-family: 'Roboto', Arial, Arial, Helvetica, sans-serif;
+  font-size: 14pt;
+}
+
+.container {
+  /* position */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 80px auto 0;
+  /* size */
+  max-width: 450px;
+  width: 100%;
+}
+
+.content {
+  /* position */
+  margin-top: 50px;
+  /* size */
+  width: 100%;
+  padding: 30px;
+  /* design */
+  background: #fff;
+  border-radius: 4px;
+}
+
+.content>p {
+  /* position */
+  margin-bottom: 30px;
+  /* size */
+  /* font */
+  line-height: 30px;
+  font-size: 22px;
+}
+
+.content>form{
+  /* position */
+  display: flex;
+  flex-direction: column;
+}
+.content > form > label {
+  /* position */
+  margin-bottom: 8px;
+  /* font */
+  font-size: 14px;
+  color: #444;
+  font-weight: bold;
+}
+
+.content > form > label > span{
+  /* position */
+  float: right;
+  /* font */
+  font-size: 12px;
+  font-weight: 100;
+  color:#999;
+}
+.content > form > input {
+  /* position */
+  margin-bottom: 20px;
+  /* size */
+  height: 45px;
+  padding: 0 14px;
+  /* font */
+  font-size: 16px;
+  /* design */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.content button.btn{
+  /* position */
+  /* size */
+  width: 100%;
+  height: 42px;
+  padding: 0 20px;
+  /* font */
+  font-size: 16px;
+  font-weight: bold;
+  color:#fff;
+  /* design */
+  border: 0;
+  border-radius: 4px;
+  background: #f05a5b;
+  /* user */
+  cursor: pointer;
+}
+
+.content button.btn:hover{
+  background: #b83232;
+}
