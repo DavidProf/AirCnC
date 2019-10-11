@@ -17,13 +17,13 @@ export default function Book({ navigation }) {
     const [date, setDate] = useState('');
     const id = navigation.getParam('id');
 
-    async function handleSubmit(){
+    async function handleSubmit() {
         const user_id = await AsyncStorage.getItem('id');
 
-        await api.post(`/spots/${id}/bookings`,{
+        await api.post(`/spots/${id}/bookings`, {
             date
         }, {
-            headers:{
+            headers: {
                 user_id
             }
         });
@@ -33,8 +33,8 @@ export default function Book({ navigation }) {
         handleCancel();
     }
 
-    function handleCancel(){
-        navigation.navigate('List'); 
+    function handleCancel() {
+        navigation.navigate('List');
     }
     return (
         <SafeAreaView style={styles.page}>
@@ -51,7 +51,7 @@ export default function Book({ navigation }) {
             <TouchableOpacity onPress={handleSubmit} style={styles.button}>
                 <Text style={styles.textButton}>Solicitar reserva</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={handleCancel} style={[styles.button,styles.cancelButton]}>
+            <TouchableOpacity onPress={handleCancel} style={[styles.button, styles.cancelButton]}>
                 <Text style={styles.textButton}>Cancelar</Text>
             </TouchableOpacity>
         </SafeAreaView>
@@ -59,14 +59,14 @@ export default function Book({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-    page:{
-        margin:30,
+    page: {
+        margin: 30,
     },
     label: {
         fontWeight: 'bold',
         color: '#444',
         marginBottom: 8,
-        marginTop:30
+        marginTop: 30
     },
     input: {
         borderWidth: 1,

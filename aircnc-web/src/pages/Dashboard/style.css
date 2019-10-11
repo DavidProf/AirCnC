@@ -1,4 +1,4 @@
-ul.spot-list{
+ul.spot-list {
     /* position */
     display: grid;
     margin-bottom: 16px;
@@ -27,7 +27,7 @@ ul.spot-list li header {
     border-radius: 4px;
 }
 
-ul.spot-list li strong{
+ul.spot-list li strong {
     /* position */
     margin-top: 10px;
     /* font */
@@ -35,8 +35,35 @@ ul.spot-list li strong{
     color: #444;
 }
 
-ul.spot-list li span{
+ul.spot-list li span {
     /* font */
     font-size: 15px;
     color: #999;
+}
+
+ul.notifications {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+ul.notifications {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+ul.notifications li button {
+    margin-right: 10px;
+    margin-top: 10px;
+    border: 0;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+ul.notifications li button.accept {
+    color:#84cd70;
+}
+
+ul.notifications li button.reject {
+    color:#e55e5e;
 }

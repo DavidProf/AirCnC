@@ -15,6 +15,13 @@ module.exports = {
 
         await booking.populate('spot').populate('user').execPopulate();
 
+        //part of funcionality with but not web socket, get owner spot
+        const ownerSocket = req.connectedUsers[booking.spot.user];
+        
+        if(ownerSocket){//If socket exists
+            req.io.to(ownerSocket).emit('booking_request',booking);
+        }
+
         return res.json(booking);
     }
 };
