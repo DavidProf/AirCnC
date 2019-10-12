@@ -13,7 +13,7 @@ const app = express();
 const server = http.Server(app);
 const io = socketio(server);
 
-mongoose.connect('mongodb://user:user@aircnc-shard-00-00-xbx5y.mongodb.net:27017,aircnc-shard-00-01-xbx5y.mongodb.net:27017,aircnc-shard-00-02-xbx5y.mongodb.net:27017/aircnc?ssl=true&replicaSet=aircnc-shard-0&authSource=admin&retryWrites=true&w=majority', {
+mongoose.connect('databaseConnectionHere', {
  useNewUrlParser:true,
  useUnifiedTopology:true
 });
